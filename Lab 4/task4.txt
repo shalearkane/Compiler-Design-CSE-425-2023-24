@@ -1,0 +1,16 @@
+Assignment #4. Implement Recursive Descent hand-made parser (top-down) for the following grammar.
+
+Given the arithmetic grammar:
+E --> TE'
+E' --> +TE' | epsilon
+T --> FT'
+T' --> *FT' | epsilon
+F --> (E) | id
+
+
+check for expression: (id + id )* id
+
+Note:-
+1) From now on, all assignments are individual assignments and need to be submitted by each one of you
+2) The code can be written in C/C++/Python.
+3) Follow the naming convention RollNo_Assignemt4.c/cpp/python

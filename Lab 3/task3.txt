@@ -1,0 +1,11 @@
+Assignment 3: Lexical Analysis using Lexical Analyzer
+
+Implementation (programs) of recognizing KEYWORDS (if-then-else), IDENTIFIERS, OPERATORS and NUMBERS for your assigned language using LEX (or FLEX) or PLY (If you are using Python).
+Upload a zip file containing the lexical analyzer program, lexical analyzer output and your assigned language program. You can
+also upload a pdf in the zip file showing the input output in the terminal if you don't have specific input files for your
+language.
+
+Note:-
+
+Your assigned language program should be a program that has enough keywords, identifiers, numbers, etc that can help validate your lexical analyzer (It should not be a simple "Hello World" program)
+The zip file naming should be Rollnumber_Assignment3.zip

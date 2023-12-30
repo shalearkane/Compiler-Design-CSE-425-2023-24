@@ -1,0 +1,7 @@
+Assignment #7: Implementation of a 3-dimensional array
+
+Use any grammar of your choice (with either fixed width or variable-width) to declare and access a 3-dimensional array, either in a row-major or column-major fashion. Show both declaration and access part taking input from the user. You can use YACC for implementation.
+
+For example, you can test with
+Declaration: int a[5][10][20];
+access: y= a[2][3][4];

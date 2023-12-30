@@ -1,0 +1,84 @@
+implement main
+'8'
+/* huhu */
+h ji */
+
+domains
+    bank = start; target.
+    state = s(bank Farmer, bank Wolf, bank Goat, bank Cabbage).
+
+constants
+    initState : state = s(start, start, start, start).
+    goalState : state = s(target, target, target, target).
+
+domains
+    cargo = alone; wolf; goat; cabbage.
+    move = m(cargo Cargo, bank After).
+
+class predicates
+    solve : (state InitState) -> move* MoveList determ.
+clauses
+    solve(Init) = MoveList :-
+        MoveList = solve1(Init, [Init]),
+        !.
+
+class predicates
+    solve1 : (state S1, state* PreviousStates) -> move* MoveList nondeterm.
+clauses
+    solve1(goalState, _PreviousStates) = [] :- % solved
+        !.
+    solve1(S1, PreviousStates) = [Move | MoveList] :-
+        % make one step
+        Move = move_nd(S1, S2),
+        % avoid illegal states
+        not(illegalState(S2)),
+        % avoid states that we have already been in
+        not(list::isMember(S2, PreviousStates)),
+        % solve the rest
+        MoveList = solve1(S2, [S2|PreviousStates]).
+
+class predicates
+    move_nd : (state Before, state After [out]) -> move Move multi.
+clauses
+    move_nd(s(A, X, Y, Z), s(B, X, Y, Z)) = m(alone, B) :- % sail alone
+        B = oppositeBank(A).
+    move_nd(s(A, A, X, Y), s(B, B, X, Y)) = m(wolf, B) :- % sail with wolf
+        B = oppositeBank(A).
+    move_nd(s(A, X, A, Y), s(B, X, B, Y)) = m(goat, B) :- % sail with goat
+        B = oppositeBank(A).
+    move_nd(s(A, X, Y, A), s(B, X, Y, B)) = m(cabbage, B) :- % sail with cabbage
+        B = oppositeBank(A).
+
+class predicates
+    oppositeBank : (bank Bank) -> bank Opposite.
+clauses
+    oppositeBank(start) = target.
+    oppositeBank(target) = start.
+
+class predicates
+    illegalState : (state State) determ.
+clauses
+    illegalState(s(A, B, B, _)) :- % wolf and goat opposite farmer
+        B = oppositeBank(A),
+        !.
+    illegalState(s(A, _, B, B)) :- % goat and cabbage opposite farmer
+        B = oppositeBank(A).
+
+clauses
+    run():-
+        console::init(),
+        if MoveList = solve(initState) then
+            foreach m(A,B) = list::getMember_nd(MoveList) do
+                stdio::writef("Sail % to %\n", A, B)
+            end foreach
+        else
+            stdio::write("No solution")
+        end if.
+
+
+
+char = 'c'
+
+/* uhuh */
+
+end implement main

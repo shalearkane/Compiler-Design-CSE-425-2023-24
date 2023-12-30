@@ -1,0 +1,9 @@
+Assignment #1: Compilation pipeline and its different components
+
+Try to compile a small toy program (example attached) and understand the entire compilation pipeline involving the job and output of the preprocessor, compiler, assembler, linker/loader.
+i. Run gcc compiler using `gcc -Wall --verbose --save-temps -o first-exec test.c'. Find the name of different components of the compiler and highlight them in the submission.
+ii. We have divided all the students into groups of 3 students each. Do the same exercise in a group for ANOTHER PROGRAM of your choice for ANOTHER LANGUAGE according to the given list provided below.
+
+Please upload a pdf sharing the terminal's commands, outputs, and screenshots for your code. Only 1 of the group members needs to upload the pdf.
+Upload the file in the given format:-
+Roll-number_Assignment-1.pdf
