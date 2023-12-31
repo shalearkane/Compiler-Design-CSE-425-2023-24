@@ -9,5 +9,10 @@ Here are all the codes written for Compiler viva.
 6. Implement Canonical LR parser for the following arithmetic grammar.
 7. Implementation of a 3-dimensional array
 
+# Pre-requisites
+1. `yacc`
+2. `flex`
+3. `ply` [python package](https://pypi.org/project/ply/)
+
 # Star, Watch and Share 🥳
 Open random pull requests, bug fixes and let me know if I should add this repo to hacktoberfest and mark your PRs as Hacktoberfest accepted 👀

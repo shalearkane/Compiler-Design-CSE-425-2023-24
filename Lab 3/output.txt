@@ -1,0 +1,8 @@
+LexToken(MAJOR_KEYWORD,'domains',2,31)
+LexToken(LOWERCASE_IDENTIFIER,'pole',3,41)
+LexToken(OPERATORS,'=',3,46)
+LexToken(LOWERCASE_IDENTIFIER,'a',3,48)
+LexToken(PUNCTUATION,';',3,49)
+LexToken(LOWERCASE_IDENTIFIER,'b',3,51)
+LexToken(PUNCTUATION,';',3,52)
+LexToken(MAJOR_KEYWORD,'class',4,54)

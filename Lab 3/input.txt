@@ -1,0 +1,5 @@
+/*
+Problem of tower of hanoi*/
+domains
+  pole = a; b;
+class
